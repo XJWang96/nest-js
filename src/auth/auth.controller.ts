@@ -7,8 +7,9 @@ export class AuthController {
     constructor(private userservice: AuthService) {}
 
     @Get()
-    findAll(): any{
-        return 'This action returns all users';
+    findAll(): any[]{
+        return this.userservice.findAll();
+        //return 'This action returns all users';
     }
   
     @Post()
